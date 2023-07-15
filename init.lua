@@ -53,8 +53,7 @@ return {
       -- "pyright"
     },
   },
-
-  -- Configure require("lazy").setup() options
+   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
     performance = {
