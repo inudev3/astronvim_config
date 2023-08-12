@@ -27,7 +27,7 @@ return {
   },
 
   lsp={
-  	["server-settings"] = {
+     config= {
       rust_analyzer = {
         settings = {
           ["rust-analyzer"] = {
