@@ -221,7 +221,7 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     opts = {
-      flavour = "latte",
+      flavour = "mocha",
       transparent_background = true,
       integrations = {
         alpha = true,
@@ -257,6 +257,20 @@ return {
         require("nvim-surround").setup({
             -- Configuration here, or leave empty to use defaults
         })
+    end
+},
+{
+  'xbase-lab/xbase',
+    build = 'make install', -- or "make install && make free_space" (not recommended, longer build time)
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "nvim-telescope/telescope.nvim", -- optional
+      "nvim-lua/plenary.nvim", -- optional/requirement of telescope.nvim
+      -- "stevearc/dressing.nvim", -- optional (in case you don't use telescope but something else)
+    },
+    config = function()
+      require("lspconfig").sourcekit.setup({})
+      require'xbase'.setup({})  -- see default configuration bellow
     end
 }
 }--
